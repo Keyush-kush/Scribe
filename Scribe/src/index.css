@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family:'Open Sans', sans-serif;
+}
+h1,h2,h3 .bold{
+    font-family: 'Poppins', sans-serif;
+}
+.header-animate {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-animate h1 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header-animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(128, 0, 128, 0.3), transparent);
+    z-index: 0;
+    transition: left 0.6s ease-in-out;
+  }
+  
+  .header-animate:hover::before {
+    left: 0;
+  }
+  
